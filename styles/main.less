@@ -17,18 +17,27 @@ html {
 
   h1
   { margin: 10px; padding-bottom: 10px; border-bottom: 2px solid @silver;
-    &:hover:after
-    { content: " ▼"; color: @lavender; font-size: 24px; }
+    &:hover
+    { cursor: pointer;
+      &:after
+      { content: " ▼"; color: @lavender; font-size: 24px; }
+    }
   }
 
   h2
-  { margin: 0 0 13px 20px; padding-right: 10px; }
+  { margin: 0 0 13px 20px; }
+
+  h3
+  { margin: 8px 0 13px 30px; }
 
   p
   { margin: 0 10px 10px 20px; padding: 10px 10px 10px 12px; border: 1px solid @silver; background-color: @alabaster; }
 
   section
-  { display: block; margin: 10px; padding: 10px 10px 10px 0; border: 2px dashed @periwinkle; border-radius: 3px; }
+  { display: block; margin: 10px; padding: 10px 10px 10px 0; border: 2px dashed @periwinkle; border-radius: 3px;
+    h2
+    { margin: 12px 0 13px 15px; }
+  }
 
   .pure-button-group
   { margin: 10px 20px; padding: 10px; border: 1px dashed @silver; }
@@ -39,4 +48,22 @@ html {
   .pure-form
   { padding: 10px; }
 
+  .pure-table
+  { margin-left: 15px; }
+
+  .pure-table-striped
+  { margin-left: 30px; }
+
+  div[class*="test"] {
+    background: #ffff00;
+  }
+
+  .pure-g
+  { margin-left: 30px;
+    .pure-u-1-2
+    { padding-bottom: 4px;
+      content
+      { padding-bottom: 4px; }
+    }
+  }
 }
