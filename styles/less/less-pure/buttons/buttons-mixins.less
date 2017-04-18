@@ -5,27 +5,24 @@
  * @author  Byrne-Systems <http://www.byrne-systems.com>
  */
 
-/* Flat Button */
+/* Flat-Button */
 /* -------------------------------------------------------------------------- */
-.flat-button {
+.flat-button(@color) {
   display: block;
-  background-color: @bsy-blue;
-  border: 1px solid @bsy-black;
-  padding: 7px 14px;
+  background-color: darken(@color, 4%);
+  .border-r(1px, solid, @color);
+  padding: 7px 14px 7px 14px;
   border-radius: 3px;
-  box-shadow: inset 1px 1px #7f7d9c;
   text-shadow: 0.75px 0.75px 0.25px rgba(128,128,128,0.85);
   vertical-align: top;
 
   &:hover {
-    background-color: @bluewood;
+    background-color: darken(@color, 7%);
     box-shadow: 1px 1px rgb(77,77,77);
-    box-shadow: inset -1px -1px #7f7d9c;
+    box-shadow: inset 1px 1px darken(@color, 3%);
   }
 
   &:active {
-    background-color: @pure-blue;
-    border: 1px solid @cloud-burst;
-    text-shadow: -0.75px -0.75px 0.25px rgba(128,128,128,0.85);
+    background-color: darken(@color, 10%);
   }
 }

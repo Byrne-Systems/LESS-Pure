@@ -77,3 +77,183 @@
   padding-bottom: @bottom;
   padding-left: @left;
 }
+
+/* Background Size */
+/* ------------------------------------------------------------------ */
+.background-size(@size) {
+  -webkit-background-size: @size;
+     -moz-background-size: @size;
+       -o-background-size: @size;
+          background-size: @size;
+}
+
+/* Fonts */
+/* -------------------------------------------------------------------------- */
+#fonts {
+  .load {
+    @font-face {
+      font-family: 'cabin';
+      src: url('../../fonts/cabin/cabin.eot');
+      src: url('../../fonts/cabin/cabin.eot?#iefix') format('embedded-opentype'),
+           url('../../fonts/cabin/cabin.woff2') format('woff2'),
+           url('../../fonts/cabin/cabin.woff') format('woff'),
+           url('../../fonts/cabin/cabin.ttf') format('truetype'),
+           url('../../fonts/cabin/cabin.svg#cabin') format('svg');
+    }
+    @font-face {
+      font-family: 'cornerstone';
+      src: url('../../fonts/cornerstone/cornerstone.eot');
+      src: url('../../fonts/cornerstone/cornerstone.eot?#iefix') format('embedded-opentype'),
+           url('../../fonts/cornerstone/cornerstone.woff2') format('woff2'),
+           url('../../fonts/cornerstone/cornerstone.woff') format('woff'),
+           url('../../fonts/cornerstone/cornerstone.ttf') format('truetype'),
+           url('../../fonts/cornerstone/cornerstone.svg#cornerstone') format('svg');
+    }
+    @font-face {
+      font-family: 'droid-mono';
+      src: url('../../fonts/droid-mono/droid-mono.eot');
+      src: url('../../fonts/droid-mono/droid-mono.eot?#iefix') format('embedded-opentype'),
+           url('../../fonts/droid-mono/droid-mono.woff') format('woff'),
+           url('../../fonts/droid-mono/droid-mono.ttf') format('truetype'),
+           url('../../fonts/droid-mono/droid-mono.svg#droid-mono') format('svg');
+    }
+    @font-face {
+      font-family: 'lato';
+      src: url('../../fonts/lato/lato.eot');
+      src: url('../../fonts/lato/lato.eot?#iefix') format('embedded-opentype'),
+           url('../../fonts/lato/lato.woff') format('woff'),
+           url('../../fonts/lato/lato.ttf') format('truetype'),
+           url('../../fonts/lato/lato.svg#lato') format('svg');
+    }
+    @font-face {
+      font-family: 'webfont-icons';
+      src: url('../../fonts/webfont-icons/webicons.eot');
+      src: url('../../fonts/webfont-icons/webicons.eot?#iefix') format('embedded-opentype'),
+           url('../../fonts/webfont-icons/webicons.woff') format('woff'),
+           url('../../fonts/webfont-icons/webicons.ttf') format('truetype'),
+           url('../../fonts/webfont-icons/webicons.svg#webicons') format('svg');
+    }
+  }
+  .face {
+    .cabin (@weight: normal, @size: 14px, @lineHeight: 20px) {
+      font-family: "cabin";
+      font-weight: @weight;
+      font-size: @size;
+      line-height: @lineHeight;
+    }
+    .cornerstone (@weight: normal, @size: 14px, @lineHeight: 20px) {
+      font-family: "cornerstone";
+      font-weight: @weight;
+      font-size: @size;
+      line-height: @lineHeight;
+    }
+    .lato (@weight: normal, @size: 14px, @lineHeight: 20px) {
+      font-family: "lato";
+      font-weight: @weight;
+      font-size: @size;
+      line-height: @lineHeight;
+    }
+    .droid-mono (@weight: normal, @size: 14px, @lineHeight: 20px) {
+      font-family: "droid-mono";
+      font-weight: @weight;
+      font-size: @size;
+      line-height: @lineHeight;
+    }
+    .webfont-icons (@weight: normal, @size: 14px, @lineHeight: 1) {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family:'webfont-icons' !important;
+      speak: none;
+      font-style: normal;
+      font-variant: normal;
+      text-transform: none;
+      font-weight: @weight;
+      font-size: @size;
+      line-height: @lineHeight;
+    }
+  }
+}
+
+/* .tag */
+/* -------------------------------------------------------------------------- */
+.tag {
+  #fonts > .face > .lato(normal, 12px, 10px);
+  border-radius: 4px;
+  color: white;
+  padding: 1px 3px;
+  margin-left: 3px;
+  text-decoration: none;
+  .tag-css {
+    @denim: rgb(21, 114, 182);
+    background-color: @denim;
+    color: white;
+    .border(2px, solid, lighten(@denim, 5%), lighten(@denim, 5%), darken(@denim, 5%), darken(@denim, 5%));
+    &:hover
+    { color: @athens-gray; }
+  }
+  .tag-pure {
+    @curious-blue: rgb(52, 152, 219);
+    background-color: @curious-blue;
+    color: white;
+    .border(2px, solid, lighten(@curious-blue, 5%), lighten(@curious-blue, 5%), darken(@curious-blue, 5%), darken(@curious-blue, 5%));
+    &:hover
+    { color: @athens-gray; }
+  }
+  .tag-js {
+    @curious-blue: @javascript;
+    background-color: @curious-blue;
+    color: white;
+    .border(2px, solid, lighten(@curious-blue, 5%), lighten(@curious-blue, 5%), darken(@curious-blue, 5%), darken(@curious-blue, 5%));
+    &:hover
+    { color: @athens-gray; }
+  }
+  .tag-yui {
+    @scarlet-gum: rgb(100, 15, 108);
+    background-color: @affair;
+    color: white;
+    .border(2px, solid, lighten(@scarlet-gum, 5%), lighten(@scarlet-gum, 5%), darken(@scarlet-gum, 5%), darken(@scarlet-gum, 5%));
+    &:hover
+    { color: @athens-gray; }
+  }
+  .tag-uncategorized {
+    @brandy-punch: rgb(218, 125, 50);
+    background-color: @cinnabar;
+    color: white;
+    .border(2px, solid, lighten(@brandy-punch, 5%), lighten(@brandy-punch, 5%), darken(@brandy-punch, 5%), darken(@brandy-punch, 5%));
+    &:hover
+    { color: @athens-gray; }
+  }
+}
+
+/* .border */
+/* -------------------------------------------------------------------------- */
+.border(@size: 1px, @type: solid, @top, @right, @bottom, @left) {
+  border-top: @size @type @top;
+  border-right: @size @type @right;
+  border-bottom: @size @type @bottom;
+  border-left: @size @type @left;
+}
+
+/* .border-r */
+/* -------------------------------------------------------------------------- */
+.border-r(@size: 1px, @type: solid, @color) {
+  border-top: @size @type darken(@color, 7%);
+  border-right: @size @type darken(@color, 21%);
+  border-bottom: @size @type darken(@color, 21%);
+  border-left: @size @type darken(@color, 7%);
+}
+
+/* .border-radius */
+/* -------------------------------------------------------------------------- */
+.border-radius(@topLeft, @topRight, @btmRight, @btmLeft) {
+  border-top-right-radius: @topLeft;
+  border-top-left-radius:  @topRight;
+  border-bottom-left-radius: @btmLeft;
+  border-bottom-right-radius: @btmRight;
+}
+
+/* .size */
+/* -------------------------------------------------------------------------- */
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
